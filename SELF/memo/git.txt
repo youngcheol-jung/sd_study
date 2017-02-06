@@ -1,0 +1,7 @@
+$ git rm -r -–cached '삭제할 폴더명'
+
+$ git commit -m “remove a directory”
+
+$ git push origin master
+
+----------------------------------------------------------------------

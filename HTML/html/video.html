@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  #videobcg
+  {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+  }
+  </style>
+
+</head>
+<body>
+  <!--헤더 어사이드 세션 푸터-->
+  <header style="border:1px #ffffff solid;  height:50px;">
+    header
+  </header>
+  <aside style="border:1px #ffffff solid; width:200px; height:500px; float:left; background:rgba(0,0,0,0.5);">
+    aside
+    <nav>
+      <li><a href="">menu01</a></li>
+      <li><a href="">menu02</a></li>
+      <li><a href="">menu03</a></li>
+      <li><a href="">menu04</a></li>
+      <li><a href="">menu05</a></li>
+    </nav>
+  </aside>
+  <section style="border:1px #ffffff solid; height:500px; margin-left=200; background:rgba(0,0,0,0.3);">
+    section
+  </section>
+  <footer style="border:1px #ffffff solid; height:80px;">
+    footer
+  </footer>
+  <video id="videobcg" preload="auto" autoplay="autoplay" loop="loop" volume="5">
+    <source src="mov/sea.mp4" type="video/mp4">
+    </video>
+
+    <audio src="mov/lalala.mp3" controls="" autoplay="" loop="" preload="auto">
+    </audio>
+
+    <picture>
+      <source media="(min-width:650px)" srcset="img_pink_flower.jpg">
+        <source media="(min-width:450px)" srcset="img_pink_flower.jpg">
+          <img src="img_orange_flowers.jpg" alt="flowersssssss" style="width:auto;">
+        </picture>
+        <progress value="22" max="100">0%</progress>
+
+      </body>
+      </html>

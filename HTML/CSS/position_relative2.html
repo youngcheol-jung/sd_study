@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>pssition</title>
+  <style>
+
+      .box{
+          width:500px;
+          height:200px;
+          border:1px #F00 solid;
+          position:relative;
+          left:50%;
+          margin-left:-250px;
+        }
+        .box2{
+            width:50px;
+            height:50px;
+            border:1px #F00 solid;
+            position: absolute;
+            left:50px;
+
+          }
+
+  </style>
+</head>
+<body>
+<div class="box"><div class="box2">ddd</div></div>
+<!--
+  position
+          static :기본
+          relative : 상대적인 (부모값이 잇어야 함 / 부모 위치/현재위치로 부터/마진오토값이 적용됨)
+                      마진 0 auto;준 상태에서 left:100px;하면 이동함
+                      포지션으로 가운데 이동하는것은 적절히 못하다
+          absolute : 절대적인
+          fixed : 고정값
+
+  top
+  right
+  bottom
+  left
+  z-index
+-->
+</body>
+</html>

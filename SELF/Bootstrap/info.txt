@@ -1,0 +1,3 @@
+내용은 웹동네를 기준으로 공부하고 있습니다.
+부트스트랩 기초 동영상 강의
+https://www.youtube.com/channel/UCeiWJFfC9YzvmamhaKtuvZA

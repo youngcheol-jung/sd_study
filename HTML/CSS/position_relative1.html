@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>pssition</title>
+  <style>
+  .box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid tomato;
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+
+  .box_parents{
+    width: 300px;
+    height: 300px;
+    border: 1px solid tomato;
+  }
+
+  .box_child{
+    width: 100px;
+    height: 100px;
+    border: 1px solid tomato;
+    background-color: powderblue;
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+
+
+  </style>
+</head>
+<body>
+  <div class="box">부모가 없기에 바디안에서 위치함</div>
+  <div class="box_parents">11
+    <div class="box_child">자식은 부모기준으로 위치함</div>
+    부모
+  </div>
+
+  <div style="width:40px; height:40px; border:1px solid tomato;">dd</div>
+  <!--
+  position
+  static :기본
+  relative : 상대적인 (부모값이 잇어야 함 / 부모 위치/현재위치로 부터/마진오토값이 적용됨)
+  마진 0 auto;준 상태에서 left:100px;하면 이동함
+  absolute : 절대적인
+  fixed : 고정값
+
+  top
+  right
+  bottom
+  left
+  z-index
+-->
+</body>
+</html>

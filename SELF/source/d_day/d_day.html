@@ -1,0 +1,81 @@
+<!doctype html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="localwallcounter.css" />
+
+<script src="moment.min.js"></script>
+<script src="moment-timezone-with-data.min.js"></script>
+
+<script src="universalcountdown.js">
+
+/***********************************************
+* Universal Countdown script- By Dynamic Drive (http://www.dynamicdrive.com)
+* Please keep this notice intact
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+</script>
+</head>
+
+<body>
+
+<div id="christmasinLA" class="wallcounter">
+
+	<div class="wrapper">
+		<div class=" fields days"></div>
+		<div class="fields hours"></div>
+
+		<div class="fields minutes"></div>
+
+		<div class="fields seconds"></div>
+	</div>
+
+</div>
+
+<script>
+
+var localcountdown = document.getElementById('christmasinLA')
+var daysdiv = localcountdown.querySelector('.days')
+var hoursdiv = localcountdown.querySelector('.hours')
+var minutesdiv = localcountdown.querySelector('.minutes')
+var secondsdiv = localcountdown.querySelector('.seconds')
+
+function padandwrap(number){
+	// padandwrap function
+	// 1) Pads single digit numbers with 0
+	// 2) Converts each number to string and wrapped in a DIV (ie: 19 becomes <div>1</div><div>9</div>) and returns it
+	var output = ''
+	var numstr = (number <=9)? '0' + number : String(number)
+	for (var i=0; i<numstr.length; i++){
+		output += '<div>' + numstr.charAt(i) + '</div>\n'
+	}
+	return output
+}
+
+// See http://momentjs.com/docs/#/parsing/string/ for valid ISO date and time strings
+// See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for list of valid time zone strings
+var localcountdown = new countDownLocalTime("2017-12-25 00:00:00", "America/Los_Angeles")
+localcountdown.oncountdown = function(ms){
+	if (ms <= 0){ // if time's up
+		alert("2016 Christmas in LA is Upon Us!") // do something
+	}
+	else{
+		var timeleft = countDownLocalTime.formatDuration(ms, "days") // format time using formatDuration(timeleftms, "baseunit") function
+		if (timeleft.days != 'n/a'){
+			daysdiv.innerHTML = padandwrap( timeleft.days )
+		}
+		if (timeleft.hours != 'n/a'){
+			hoursdiv.innerHTML = padandwrap( timeleft.hours )
+		}
+		if (timeleft.minutes != 'n/a'){
+			minutesdiv.innerHTML = padandwrap( timeleft.minutes )
+		}
+		secondsdiv.innerHTML = padandwrap( timeleft.seconds )
+	}
+}
+localcountdown.start()
+
+</script>
+
+<p style="text-align:center; font:bold 40px Arial">left until Christmas 2016 in Los Angeles!</p>

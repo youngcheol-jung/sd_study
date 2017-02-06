@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>media_query_01</title>
+  <style>
+  @media(max-width:600px){
+    body{
+      background-color: powderblue;
+    }
+  }
+  @media(max-width:500px){
+    body{
+      background-color: tomato;
+    }
+  }
+  @media(min-width:601px){
+    body{
+      background-color: limegreen;
+    }
+  }
+
+
+
+
+  </style>
+</head>
+<body>
+<ul>
+  <li>~500px : tomato</li>
+  <li>501px ~ 600px : powderblue</li>
+  <li>601px : limegreen</li>
+</ul>
+
+
+</body>
+</html>

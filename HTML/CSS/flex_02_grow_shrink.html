@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .container{
+    background-color: powderblue;
+    display: flex;
+    flex-direction: row-reverse; /* 리버스 넣지 않으면 기본적으로 로우의 속성을 가짐*/
+    flex-direction: column; /* 컬럼(세로)*/
+  }
+  .item{
+    background-color: tomato;
+    color: white;
+    border: 1px solid white;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+
+
+</body>
+</html>
+<!--
+* 화면 전체를 쓰는 태그를 블럭 레벨 엘리먼트(div)
+
+flex
+부모에게 디스플레이 플랙스 값을 주는것으로 시작함
+속성들이 많고 어렵고 까다롭다
+
+
+ -->

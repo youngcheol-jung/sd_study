@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>pssition</title>
+  <style>
+
+      .box{
+          width:500px;
+          height:200px;
+          border:1px #F00 solid;
+          position:absolute;
+          left:0px;
+          top: 0px;
+        }
+
+  </style>
+</head>
+<body>
+<div class="box">absolute</div>
+<span style="background-color:gold">엡슬루트는 화면의 좌표값이기에 지금 이글씨에 영향을 받지 않는다.</span>
+<!--css2 /  position: static|absolute|fixed|relative|initial|inherit;
+  position
+          static :기본
+          relative :  상대적인 (부모값이 잇어야 함 / 부모 위치/현재위치로 부터/마진오토값이 적용됨)
+                      마진 0 auto;준 상태에서 left:100px;하면 이동함
+                      포지션으로 가운데 이동하는것은 적절히 못하다
+          absolute : 절대적인(화면의 값으로 이동/ 공중에 뜬 상태:)
+                     한번에 4가지 값 적용됨 ,단위드와헤이트 값이 없어야 함
+
+          fixed : 고정값
+
+  top
+  right
+  bottom
+  left
+  z-index
+-->
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" width="200" height="100%">
+        <caption>table traging</caption>
+        <colgroup>
+            <!간격조절>
+            <col width="70">
+            <col width="30">
+            <col width="30">
+            <col width="70">
+        </colgroup>
+
+        <thead>
+            <tr bgcolor="#cccccc">
+                <th>c1</th>
+                <th>c2</th>
+                <th>c3</th>
+                <th>c4</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>cs=1,<br/>rs=1</td>
+                <td rowspan="2" colspan="2">cs=2,<br/>rs=2</td>
+                <td rowspan="3">cs=1,<br/>rs=3</td>
+            </tr>
+            <tr>
+                <td span="3">cs=1,<br/>rs=1</td>
+            </tr>
+            <tr>
+                <td colspan="3">cs=2,rs=1</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

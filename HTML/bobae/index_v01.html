@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  /*reset*/
+  *{margin:0; padding:0;}
+  ol,ul{list-style:none;}
+  body{font-size:12px;}
+  a{text-decoration:none; color:#000;}
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"]
+  {cursor:pointer;}
+  img{vertical-align:top;}
+  input{vertical-align:middle;}
+  fieldset{border:0;}
+  .bg{background-image:url(image/bggg.jpg);
+      background-position: center;
+      background-repeat: no-repeat;}
+
+
+  /*option*/
+  .fl{float:left;}
+  .fr{float:right;}
+  i.icon-select{
+    margin-left:3px;
+    background-image: url(image/btn_arrow.jpg);
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    display:inline-block;
+    vertical-align:-3px;
+  }
+  i.icon-mobile{
+    margin-right:3px;
+    background-image: url(image/icon_mobile.jpg);
+    background-repeat: no-repeat;
+    width: 8px;
+    height: 12px;
+    display:inline-block;
+    vertical-align:-3px;
+  }
+  .ir{
+    text-indent:-9999px;
+    font-size:0;
+    position:absolute;
+    left:-9999px;
+    top:-9999px;
+  }
+
+  /*layout*/
+  .heading{
+    height:30px;
+    background-color:#f8f8f8;
+    border-bottom:1px #d5d0cc solid;
+  }
+  .heading .gnb{
+    width: 990px;
+    height: 30px;
+    line-height:30px;
+    border:1px #F00 solid;
+    margin:0 auto;
+  }
+
+  .gnb a.book_mark{
+    font-size:11px;
+    padding-left:13px;
+    background-image: url(image/icon_star.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+  }
+
+
+  .gnb .rank{margin-left:14px;}
+  .gnb .rank li{
+    display:none;
+    font-size:11px;
+    padding-left:20px;
+    background-image: url(image/icon_number.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+  }
+
+  .gnb .rank li .up_icon{
+    padding-left:8px;
+    background-image: url(image/icon_arrow_top.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 ;
+    font-style:normal;
+  }
+  .gnb .rank .on{display:block;}
+  .gnb .rank i[class^="up_"]{color:red;}
+  .gnb .rank i[class^="down_"]{color:blue;}
+
+  .gnb .global_menu li{
+    float:left;
+    padding:0 8px 0 7px;
+    background-image: url(image/head_menu_line.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+  }
+  .gnb .global_menu li strong{
+    color:blue;
+  }
+  .gnb .global_menu li:first-child{
+    background:none;
+  }
+
+
+  /*lnb*/
+  .lnb {height:107px; border:1px #F00 solid; width:990px; margin:0 auto;}
+  .lnb .logo{width:105px;height: 27px;border:1px #F00 solid; position:relative; top:34px;}
+  .lnb .promotion{width: 244px;height: 90px;border:1px #F00 solid;position:relative; top:15px;}
+  .lnb .search{width:280px; height:79px;background: #ccc; margin:0 auto; position:relative; top:16px;}
+  .lnb .search input[type="text"]{height:21px;border:2px #3b5999 solid; width: 218px; padding: 0 10px;}
+  .lnb .search input[type="submit"]{height:25px; width:38px; border:0 none;  font-size:0; text-indent:-9999px; background:#3b5999 url(image/icon_search.jpg) no-repeat center center;}
+  .lnb .submenu{position:relative; }
+  .lnb .submenu li{float:left;}
+  .lnb .submenu li:first-child img{padding-left:0; background-images:none;}
+  .lnb .submenu li img{
+    padding:0 7px 0 8px;
+    background-image: url(image/lnb_horizon.jpg);
+    background-repeat: no-repeat;
+  }
+  .nav{width:990px; height:76px; margin:0 auto; border-bottom:1px #F00 solid;}
+  .nav>ul{height:38px; background-color: #CCC;}
+  .nav>ul>li{float:left; line-height:38px;font-size:14px; font-weight:bold;}
+  .nav>ul>li:hover{background: #EEE;}
+  /*.nav>ul>li:hover ul{display:block;}*/
+  .nav>ul>li>a{display:block;padding:0 11px; }
+  .nav ul ul{position:absolute; display:none;}
+  .nav li.on ul{display:block;}
+  .nav ul ul li{float:left;margin:0 10px;}
+
+  .section {margin: 0 auto;height: 1349px; width: 990px;}
+  .first-content {margin: 0 auto; width: 748px; height: 1349px;margin-right: 5px;float: left;}
+  .ad{width: 748px; height: 106px; margin-top: 5px;}
+  .ad1{width: 520px; height: 100px;margin-right: 4px;outline:1px #cccccc; solid;}
+  .ad2{width: 220px; height: 100px;outline:1px #cccccc; solid;}
+  .gally{width: 748px;height: 244px; margin-top: 11px; border-bottom: 1px #cccccc solid;}
+  .gally-big{width: 402px;height: 233px;margin-right: 8px;}
+  .gally-thum{width: 324px;height: 233px;}
+
+  .new-cyber{width: 748px;height: 198px; border-bottom: 1px #cccccc solid;}
+  .new-cyber-head{width: 748px;height: 35px; margin-top: 14px;}
+  .new-cyber-head img:first-child{width: 99px;height: 13px; margin-top: 14px;float: left;}
+  .new-cyber-head img:last-child{width: 35px;height: 10px; margin-top: 14px; float: right;}
+  .new-cyber-thum{margin-top: 9px;}
+  .new-cyber-thum ul li{ width:136px; height: 102px; padding-right: 10px; float: left; text-align: center;}
+  .new-cyber-thum ul li img{width: 136px; height: 102px; outline: 1px #cccccc solid;}
+  .new-cyber-thum ul li span{}
+
+
+
+
+    .aside {margin: 0 auto; width: 237px;height: 1349px;float: left;}
+    .footer {margin: 0 auto; width: 990px; height: 452px;clear: left}
+
+    </style>
+  </head>
+  <body class="bg">
+    <div class="heading">
+      <div class="gnb">
+        <div class="site_option fl">
+          <a href="" class="fl book_mark">즐겨찾기</a>
+          <ol class="fl rank">
+            <li><a href="">기아K5 출시</a></li>
+            <li><a href="">기아K5 출시</a></li>
+            <li><a href="">기아K5 출시</a></li>
+            <li class="on"><a href="">기아K5 출시<i class ="up_icon">45</i></a></li>
+          </ol>
+        </div><!--site_option end-->
+        <div class="global_menu fr">
+          <ul><!-- ul>li(a{click})*7    -->
+            <li><a href="">로그인</a></li>
+            <li><a href="">회원가입</a></li>
+            <li><a href="">마이페이지<i class="icon-select"></i></a></li>
+            <li><a href="">쪽지</a><strong>1</strong></li>
+            <li><a href="">찜한차량 <strong>1</strong></a></li>
+            <li><a href="">고객센터</a></li>
+            <li><a href="">전체메뉴<i class="icon-select"></i></a></li>
+            <li><a href=""><i class="icon-mobile"></i>모바일</a></li>
+          </ul>
+        </div><!--global_menu end-->
+      </div><!--gnb end-->
+    </div><!--heading end-->
+
+    <div class="lnb">
+      <div class="logo fl"><h1><img src="image/logo.jpg"/></h1></div><!--logo fl end-->
+      <div class="promotion fr"><img src="image/ad_left.jpg"/></div><!--promotion fr end-->
+      <div class="search">
+        <div><img src="image/ad_top.jpg" alt=""></div>
+        <fieldset>
+          <legend class="ir">검색</legend>
+          <input type="text"><input type="submit" value="검색">
+        </fieldset>
+      </div><!--serch end end-->
+      <div class="submenu">
+        <ul>
+          <li><a href=""><img src="image/head_menu_01.jpg" alt=""></a></li>
+          <li><a href=""><img src="image/head_menu_02.jpg" alt=""></a></li>
+          <li><a href=""><img src="image/head_menu_03.jpg" alt=""></a></li>
+          <li><a href=""><img src="image/head_menu_04.jpg" alt=""></a></li>
+          <li><a href=""><img src="image/head_menu_05.jpg" alt=""></a></li>
+        </ul>
+      </div><!--submenu end end-->
+    </div><!--lnb end-->
+
+    <div class="nav">
+      <ul>
+        <li class="on"><a href="">사이버매장</a>
+          <ul>
+            <li><a href="">국산차매장</li>
+              <li><a href="">수입차매장</a></li>
+              <li><a href="">승용차매장</a></li>
+              <li><a href="">스포츠카매장</a></li>
+              <li><a href="">4륜/SUV매장</a></li>
+              <li><a href="">밴/승합차매장</a></li>
+              <li><a href="">튜닝카 매장</a></li>
+              <li><a href="">올드카매장</a></li>
+              <li><a href="">오토갤러리매장</a></li>
+            </ul>
+          </li>
+          <li><a href="">국산중고차</a>
+            <ul>
+              <li><a href="">text01</a></li>
+              <li><a href="">text02</a></li>
+              <li><a href="">text03</a></li>
+              <li><a href="">text04</a></li>
+              <li><a href="">text05</a></li>
+            </ul>
+          </li>
+          <li><a href="">수입중고차</a>
+            <ul>
+              <li><a href="">text01</a></li>
+              <li><a href="">text02</a></li>
+              <li><a href="">text03</a></li>
+              <li><a href="">text04</a></li>
+              <li><a href="">text05</a></li>
+            </ul>
+          </li>
+          <li><a href="">내차팔기</a>
+            <ul>
+              <li><a href="">text01</li>
+                <li><a href="">text02</a></li>
+                <li><a href="">text03</a></li>
+                <li><a href="">text04</a></li>
+                <li><a href="">text05</a></li>
+              </ul>
+            </li>
+            <li><a href="">커뮤니티</a>
+              <ul>
+                <li><a href="">text01</a></li>
+                <li><a href="">text02</a></li>
+                <li><a href="">text03</a></li>
+                <li><a href="">text04</a></li>
+                <li><a href="">text05</a></li>
+              </ul>
+            </li>
+            <li><a href="">더보기</a>
+              <ul>
+                <li><a href="">text02</a></li>
+                <li><a href="">text02</a></li>
+                <li><a href="">text03</a></li>
+                <li><a href="">text04</a></li>
+                <li><a href="">text05</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div><!--nav end-->
+        <div class="section">
+          <div class="first-content">
+            <div class="ad">
+              <div class="ad1 fl"><img src="image/ad_content01.png"/></div>
+              <div class="ad2 fl"><img src="image/ad_content02.jpg"/></div>
+            </div><!--ad end-->
+            <div class="gally">
+              <div class="gally-big fl">
+                <div class=""gally-big1""></div>
+                <div class=""gally-big2""></div>
+              </div><!--gally-big end-->
+              <div class="gally-thum fl">
+                <ul>
+                  <li>
+                    <img src="show_thum_01.jpg"/>
+                    <p>국산 중고차 특종매물</p>
+                    <span>국산중고차 특종매물 1988 현대 스텔라 1.5 88형 GL극 희소. 1988년 올림픽 공식모델!!</span>
+                  </li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div><!--gally-thum end-->
+            </div><!--gally end-->
+            <div class="new-cyber">
+              <div class="new-cyber-head fl">
+                <img src="image/h_txt_01.jpg"/>
+                <img src="image/btn_more.jpg"/>
+              </div>
+              <div class="new-cyber-thum">
+                <ul>
+                  <li><img src="image/p1_01.jpg"/><p>BMW 1M 쿠페 <br/>2001년식</p></li>
+                  <li><img src="image/p1_01.jpg"/><p>BMW 1M 쿠페 <br/>2001년식</p></li>
+                  <li><img src="image/p1_01.jpg"/><p>BMW 1M 쿠페 <br/>2001년식</p></li>
+                  <li><img src="image/p1_01.jpg"/><p>BMW 1M 쿠페 <br/>2001년식</p></li>
+                  <li><img src="image/p1_01.jpg"/><p>BMW 1M 쿠페 <br/>2001년식</p></li>
+                </ul>
+              </div><!--new-cyber-thum end-->
+            </div><!--new-cyber end-->
+
+          </div><!--first-content end-->
+          <div class="aside"></div><!--aside end-->
+        </div><!--section end-->
+        <div class="footer"></div><!--footer end-->
+
+
+
+      </body>
+      </html>
