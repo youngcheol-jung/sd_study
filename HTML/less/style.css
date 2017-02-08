@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 500px;
+  float: left;
+}
+.aside {
+  margin-left: 510px;
+}
+.gnb {
+  border: 11px #ff0a0a solid;
+}
+.gnb li {
+  border: 1px #foo solid;
+}
+.gnb li:first-child {
+  background-color: gold;
+}
+.gnb a {
+  text-decoration: none;
+}
+.gnb a:hover {
+  color: red;
+}
